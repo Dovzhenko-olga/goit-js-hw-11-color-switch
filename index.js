@@ -15,7 +15,8 @@ const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 const bodyColor = function() {
-  body.style.backgroundColor = colors[randomIntegerFromInterval(1, 10)]
+  body.style.backgroundColor = colors[randomIntegerFromInterval(0, colors.length - 1)];
+  console.log(body.style.backgroundColor);
 }
 
 let timerId = null;
